@@ -4,7 +4,7 @@
 > Curriculo enfermagem
 
 Projeto construido com intuito de fazer um curriculo dinamico com botões que 
-permitem visualizar mais detalhes dos cargos e a idade seja atualizada de forma automatica.
+permitem visualizar mais detalhes dos cargos e a idade seja atualizada de forma automatica e com efeito CSS no plano de fundo.
 
 [ Clique aqui para acessar](https://douglascorreacavasso.github.io/Borboleta-Azul/)
 
