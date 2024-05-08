@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <!-- Links CSS do CodePen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&amp;display=swap">
+    <style>
+        /* Seu CSS personalizado aqui */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('FUNDO.jpg'); /* Caminho para o arquivo de imagem de fundo */
+            background-repeat: repeat; /* Repetir a imagem em todas as direções */
+            background-size: cover; /* Cobertura total da tela */
+            background-position: center; /* Posicionar a imagem no centro */
+            display: flex;
+            flex-direction: column; /* Organizar o conteúdo em coluna */
+            align-items: center; /* Centralizar o conteúdo na horizontal */
+            justify-content: center; /* Centralizar o conteúdo na vertical */
+            min-height: 100vh; /* Altura mínima da página para garantir centralização */
+        }
+        .container {
+            
+            max-width: 100%; /* O container ocupa toda a largura da tela */
+            padding: 20px; /* Aumentar o padding para telas menores */
+            text-align: left;
+        }
+       
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+        .custom-btn {
+            color: black; /* Cor do texto dos botões */
+            border-radius: 5px;
+            padding: 10px 20px; /* Ajustar o padding se necessário */
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: auto; /* Botões se ajustam ao tamanho do texto */
+            margin: 15px 10px; /* Espaçamento entre os botões */
+            border: 2px solid black; /* Borda preta de 2px */
+        }
+        .btn-16 {
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-16:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            direction: rtl;
+            z-index: -1;
+            box-shadow:
+            -7px -7px 20px 0px #fff9,
+            -4px -4px 5px 0px #fff9,
+            7px 7px 20px 0px #0002,
+            4px 4px 5px 0px #0001;
+            transition: all 1s ease;
+            animation: btn-animation 2s ease; /* Animação com duração de 1.5s e easing */
+        }
+        .btn-16:hover {
+            color: #fff;
+        }
+        .btn-16:hover:after {
+            left: auto;
+            right: 0;
+            width: 0;
+        }
+        .btn-16:active {
+            top: 2px;
+        }
+        @keyframes btn-animation {
+            from {
+                left: auto;
+                right: 0;
+                width: 0;
+            }
+            to {
+                left: 0;
+                width: 100%;
+            }
+        }
+        .expand-content {
+            background-color: transparent; /* Transparência total */
+            /* ... outros estilos ... */
+        }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 800px; /* Largura máxima do container */
+                margin: 0 auto; /* Centralizar o container na tela */
+            }
+            .experiencia-container {
+                display: flex; /* Organizar os botões em linha */
+                flex-wrap: wrap; /* Permitir que os botões quebrem em várias linhas */
+                justify-content: space-between; /* Distribuir os botões com espaço entre eles */
+            }
+            .btn-experiencia {
+                margin: 10px; /* Espaçamento entre os botões */
+            }
+            #empre1, #empre2, #empre3 {
+  display: none; /* Ocultar as divs de conteúdo inicialmente */
+  height: 200px; /* Altura inicial (ajuste de acordo com o conteúdo) */
+}
+       
+ 
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Ricardo Henrique Raiol Dos Santos</h1>
+    <hr>
+    <div class="container">
+       
+            <p>Idade: 28 anos</p>
+            <p>Estado Civil: Solteiro</p>
+            <p>Inglês: Básico</p>
+            <p>Telefone: (41) 99709-6336 | (91) 99804-9467</p>
+            <p>E-mail: raiol.santos3@gmail.com</p>
+            <p>Curitiba – PR</p>
+        
+    </div>
+    <hr>
+    <h2>Objetivo Profissional</h2>
+    <p>Busco aplicar meus conhecimentos teóricos e práticos como técnico em enfermagem em um ambiente de saúde dinâmico, onde possa contribuir para o bem-estar dos pacientes, aprender com profissionais experientes e desenvolver minhas habilidades clínicas.</p>
+    <hr>
+
+    <h2>Experiência Profissional</h2>
+    <div class="experiencia-container">
+        <!-- Botões da Experiência Profissional com a classe 'btn-experiencia' -->
+        <button class="custom-btn btn-16 btn-experiencia" onclick="toggleContent('empre1')">Técnica em Enfermagem - HPSM Dr. Humberto Maradei Pereira (2020-2023)</button>
+        <div id="empre1" class="expand-content" style="display: none;">
+            <p>Responsabilidades:</p>
+            <ul>
+                <li>Auxiliar equipe na realização de procedimentos invasivos, como punções venosas e coleta de sangue.</li>
+                <li>Ministrar medicamentos via oral, intramuscular e intravenosa, seguindo rigorosamente as prescrições médicas.</li>
+                <li>Realizar curativos em feridas simples e complexas, com foco na prevenção de infecções.</li>
+                <li>Monitorar sinais vitais de pacientes em estado grave, identificando alterações e reportando-as à equipe médica de forma imediata.</li>
+            </ul>
+            <hr>
+        </div>
+        <button class="custom-btn btn-16 btn-experiencia" onclick="toggleContent('empre2')">Técnica em Enfermagem - Hospital MATER DEI Porto Dias (2019 - 2020)</button>
+        <div id="empre2" class="expand-content" style="display: none;">
+            <p>Responsabilidades:</p>
+            <ul>
+                <li>Realizar assistência de enfermagem a pacientes em diversos setores, incluindo UTI, clínica médica e pronto-socorro.</li>
+                <li>Participar ativamente de campanhas de prevenção e controle de infecções hospitalares, seguindo protocolos específicos de higienização e isolamento.</li>
+                <li>Colaborar com a equipe multidisciplinar na elaboração de planos de cuidados individualizados para pacientes com condições crônicas.</li>
+                <li>Prestar suporte emocional a pacientes e familiares, esclarecendo dúvidas e fornecendo informações sobre o tratamento.</li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+
+    <button class="custom-btn btn-16 btn-experiencia" onclick="toggleContent('empre3')">Estágio - Técnico em Enfermagem - UPA Dr. Nonato Sanova (2018 - 2019)</button>
+
+
+    <div id="empre3" class="expand-content" style="display: none;">
+        <p>Responsabilidades:</p>
+        <ul>
+            <li>Auxiliei a equipe em procedimentos básicos de enfermagem, como higiene e alimentação de pacientes.</li>
+            <li>Prestei suporte em atividades de monitoramento de sinais vitais e administração de medicamentos sob supervisão direta.</li>
+            <li>Contribuí para a organização e manutenção do ambiente de trabalho, garantindo a segurança e o conforto dos pacientes.</li>
+        </ul>
+       
+    </div>
+
+    <hr>
+
+    <h2 class="curso-aprimoramento">Cursos de Aperfeiçoamento</h2>
+    <div>
+        <ul>
+            <li>Capacitação em Obstetrícia e Ginecologia - Instituto de Ed. Integrada Albert Einstein; 45 h (2018)</li>
+            <p></p>
+            <li>Administração de Medicamentos Injetáveis - Instituto de Ed. Integrada Albert Einstein; 10 h (2018)</li>
+            <p></p>
+            <li>Capacitação em Técnicas Laboratoriais para Profissionais da Saúde - Instituto de Ed. Integrada Albert Einstein. 23 h (2017)</li>
+            <p></p>
+            <li>Curso de Informática Básica - CDI-PA; 80 h (2014)</li>
+        </ul>
+    </div>
+    <hr>
+    <script>
+      function toggleContent(id) {
+          var x = document.getElementById(id);
+          if (x.style.display === "none") {
+              x.style.display = "block";
+              x.style.transition = 'all 2s ease'; // Adiciona a transição quando o conteúdo é exibido
+          } else {
+              x.style.display = "none";
+              x.style.transition = 'all 2s ease'; // Adiciona a transição quando o conteúdo é ocultado
+          }
+      }
+  </script>
+</div>
+
+
+</body>
+</html>
